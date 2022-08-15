@@ -1,5 +1,9 @@
 import numpy as np
 import torch
+from tqdm import tqdm
+
+from src.models import *
+from src.utils import *
 
 # One iteration of TinyNeRF (forward pass).
 def run_one_iter_of_tinynerf(
@@ -65,7 +69,7 @@ def train_tinynerf(
     psnrs = []
     iternums = []
 
-    for i in range(num_iters):
+    for i in tqdm(range(num_iters)):
         # Randomly pick an image as the target.
         target_img_idx = np.random.randint(images.shape[0])
         target_img = images[target_img_idx].to(device)

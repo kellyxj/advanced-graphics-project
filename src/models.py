@@ -1,6 +1,8 @@
 import numpy as np
 import torch
 
+from src.utils import *
+
 class VeryTinyNerfModel(torch.nn.Module):
     """
     Define a "very tiny" NeRF model comprising three fully connected layers.
