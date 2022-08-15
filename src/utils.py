@@ -3,6 +3,42 @@ import numpy as np
 import torch
 import matplotlib.pyplot as plt
 
+def load_data(path, device):
+    """
+    Load data given path
+    """
+
+    # Load input images, poses, and intrinsics
+    data = np.load(path)
+
+    # Images
+    images = data["images"]
+
+    # Camera extrinsics (poses)
+    tform_cam2world = data["poses"]
+    tform_cam2world = torch.from_numpy(tform_cam2world).to(device)
+
+    # Focal length (intrinsics)
+    focal_length = data["focal"]
+    focal_length = torch.from_numpy(focal_length).to(device)
+
+    # Height and width of each image
+    height, width = images.shape[1:3]
+
+    # Near and far clipping thresholds for depth values.
+    near_thresh = 2.
+    far_thresh = 6.
+
+    # Hold one image out (for test).
+    testimg, testpose = images[101], tform_cam2world[101]
+    testimg = torch.from_numpy(testimg).to(device)
+
+    # Map images to device
+    images = torch.from_numpy(images[:100, ..., :3]).to(device)
+
+    return images, tform_cam2world, height, width, focal_length, near_thresh, far_thresh
+
+
 def meshgrid_xy(tensor1: torch.Tensor, tensor2: torch.Tensor) -> (torch.Tensor, torch.Tensor):
     """Mimick np.meshgrid(..., indexing="xy") in pytorch. torch.meshgrid only allows "ij" indexing.
     (If you're unsure what this means, safely skip trying to understand this, and run a tiny example!)
