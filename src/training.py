@@ -56,7 +56,8 @@ def train_tinynerf(
     depth_samples_per_ray = 32,
     chunksize = 16384,
     lr = 5e-3,
-    num_iters = 1000
+    num_iters = 1000,
+    display_every = 100
 ):
     """
     Train-Eval-Repeat!
@@ -86,3 +87,10 @@ def train_tinynerf(
         loss.backward()
         optimizer.step()
         optimizer.zero_grad()
+
+        if i % display_every == 0:
+            plt.figure(figsize=(10, 4))
+            plt.subplot(121)
+            plt.imshow(rgb_predicted.detach().cpu().numpy())
+            plt.title(f"Iteration {i}")
+            plt.show()
