@@ -1,0 +1,33 @@
+Goal: The aim of this project is to provide an understandable and extensible codebase for exploring neural rendering. Neural rendering is a promising
+paradigm for leveraging the expressive power of deep learning to the problem of 3d reconstruction from multiple views. Rather than using a neural network 
+to directly output an image, instead a network is used to predict the parameters of a 3-dimensional scene representation. This representation is then 
+imaged using a standard rendering pipeline, which imposes a strong, physically-based constraint on the output of the network. A key advantage of this 
+approach is that it guarantees consistency between images rendered from different viewpoints. Using a conditional GAN for this task has the issue that 
+the object being imaged will spontaneously change as the camera moves[1].
+
+
+Past work: Neural radiance fields[2] (NeRFs) are currently the most popular approach to neural rendering due to their ability to achieve photorealistic 
+reconstruction quality on a wide range of scenes. Since their introduction of 2020, there has been a proliferation of research seeking to extend NeRF and 
+to address their fundamental drawbacks[3]. Many existing tutorials[4],[5] do not address the issue of data collection/augmentation, which is important 
+for evaluating the reconstruction quality of NeRFs under a variety of conditions. Changing the scene lighting, the surface geometry of an object, or the 
+position of the camera can all have significant effects on the reconstruction quality. 
+
+
+Approach: We show how to use the Mitsuba renderer to quickly and easily create synthetic renders to be used as training inputs for a NeRF. We construct a 
+full end-to-end training pipeline in python and utilize it to train both a minimal NeRF architecture and a non-neural network implementation. Mitsuba offers 
+very flexible manipulation of scene parameters, allowing for an intuitive and powerful way of editing the input views used to train the NeRF. This sidesteps 
+the need to register a camera (which would be needed if using COLMAP to train the NeRF on real photographs) and avoids using blender, which can be cumbersome. 
+We provide an interactive graphical user interface for editing input views and for imaging the final result of the reconstruction output. 
+
+
+Conclusion: We hope that this project will make neural rendering more accessible and intuitive to any interested parties. Previous tutorials on this subject 
+have assumed a robust working knowledge of the fundamentals of neural networks and computer graphics. By reducing this specialized knowledge requirement, 
+readers will easily be able to download and extend the repository, enabling them to perform their own neural rendering experiments with minimal amounts of 
+tedious setup. 
+
+________________
+[1] see https://github.com/agermanidis/Liquid-Warping-GAN for an example
+[2] https://www.matthewtancik.com/nerf 
+[3] https://arxiv.org/abs/2111.05849 
+[4] https://colab.research.google.com/drive/1TppdSsLz8uKoNwqJqDGg8se8BHQcvg_K?usp=sharing
+[5] https://github.com/bmild/nerf/blob/master/tiny_nerf.ipynb

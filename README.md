@@ -19,4 +19,15 @@ In our tutorial, we demonstrate how to build a simple NeRF along with some demon
 * Setting up optimization scenes
 * Results
 
-Our tutorial imploys widgets for user interaction as well so different parameters can be tested with our data
+Our tutorial employs widgets for user interaction as well so different parameters can be tested with our data
+
+## Dependencies:
+Use your preferred package manager (e.g. conda or pip) to install
+* numpy
+* pytorch
+* matplotlib
+* Mitsuba
+
+## Extending this project:
+This project can be easily extended. Try adding an alternative NeRF class to models.py or importing new scene XML files from the Mitsuba website to the "scenes"
+directory of this repository.
