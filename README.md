@@ -28,6 +28,9 @@ Use your preferred package manager (e.g. conda or pip) to install
 * matplotlib
 * Mitsuba
 
+Instructions for installing pip https://pip.pypa.io/en/stable/installation/
+Instructions for installing pytorch https://pytorch.org/get-started/locally/. Select CUDA if you have a NVIDIA GPU. Select CPU otherwise
+
 ## Extending this project:
 This project can be easily extended. Try adding an alternative NeRF class to models.py or importing new scene XML files from the Mitsuba website to the "scenes"
 directory of this repository.
