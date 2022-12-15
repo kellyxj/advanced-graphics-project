@@ -15,17 +15,6 @@ This presentation was given for computational optics.
 
 In our tutorial, we demonstrate how to build a simple NeRF along with some demonstrations of the training process. 
 
-## Topics covered: 
-* SetUp
-* Creating multiple sensors and defining a camera
-* A brief explaination of the camera matrix
-* Training NeRFs
-* Implementing differentiable integrators for emissive volumes
-* Setting up optimization scenes
-* Results
-
-Our tutorial employs widgets for user interaction as well so different parameters can be tested with our data
-
 ## Dependencies:
 Use your preferred package manager (e.g. conda or pip) to install
 * numpy
