@@ -1,5 +1,5 @@
 # Advanced Graphics Project: NeRFs
-In this tutorial, implements NeRF from first principles. Mitsuba is used to provide an interface for specifying camera extrinsics.
+This tutorial implements NeRF from first principles. Mitsuba is used to provide an interface for specifying camera extrinsics.
 
 ## What is a NeRF?
 
