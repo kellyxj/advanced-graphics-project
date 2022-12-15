@@ -9,7 +9,7 @@ Power point slides:
 
 [https://docs.google.com/presentation/d/1-yWFlR1S8QoORCyof0gXyeNREdqYPdd8KghILn4fpCA](https://docs.google.com/presentation/d/1-yWFlR1S8QoORCyof0gXyeNREdqYPdd8KghILn4fpCA)
 
-This presentation was given for the advanced graphics seminar. This class had a lot of students with an interest in neural networks, so it treats NeRF from a deep learning perspective.
+This first presentation was given for the advanced graphics seminar. This class had a lot of students with an interest in neural networks, so it treats NeRF from a deep learning perspective.
 
 [https://docs.google.com/presentation/d/10__u8DagReH-SO_2vzRXxDx3FVcuOv0gvLUTrkZywLg](https://docs.google.com/presentation/d/10__u8DagReH-SO_2vzRXxDx3FVcuOv0gvLUTrkZywLg)
 
