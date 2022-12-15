@@ -1,6 +1,5 @@
 # Advanced Graphics Project: NeRFs
-In this tutorial, we implemented a simple NeRf using Mitsuba. This implementation optimizes a neural representation for a single 
-scene and rendering new views.
+In this tutorial, implements NeRF from first principles. Mitsuba is used to provide an interface for specifying camera extrinsics
 
 ## What is a NeRF?
 
