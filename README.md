@@ -3,9 +3,10 @@ This tutorial implements NeRF from first principles. Mitsuba is used to provide 
 
 ## What is a NeRF?
 
-A neural radiance field is a way of representing a scene in support of [novel view synthesis](https://en.wikipedia.org/wiki/View_synthesis). The network directly maps from spatial location and viewing direction (5D input) to color and opacity (4D output), acting as the "volume" so we can use [volume rendering](https://en.wikipedia.org/wiki/Volume_rendering) to render new views. The radiance field can be optimized by gradient descent, providing a straightforward and robust improvement over [multi-view stereo](https://carlos-hernandez.org/papers/fnt_mvs_2015.pdf).
+A neural radiance field is a way of representing a scene in support of [novel view synthesis](https://en.wikipedia.org/wiki/View_synthesis). The network directly maps from spatial location and viewing direction (5D input) to color and opacity (4D output), acting as the "volume" so we can use [volume rendering](https://en.wikipedia.org/wiki/Volume_rendering) to render new views. The radiance field can be optimized by gradient descent. Compared to [multi-view stereo](https://carlos-hernandez.org/papers/fnt_mvs_2015.pdf), NeRF is more straightforward and more robust.
 
 Power point slides:
+
 [https://docs.google.com/presentation/d/1-yWFlR1S8QoORCyof0gXyeNREdqYPdd8KghILn4fpCA](https://docs.google.com/presentation/d/1-yWFlR1S8QoORCyof0gXyeNREdqYPdd8KghILn4fpCA)
 
 This presentation was given for the advanced graphics seminar. This class had a lot of students with an interest in neural networks, so it treats NeRF from a deep learning perspective.
