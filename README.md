@@ -23,6 +23,7 @@ Use your preferred package manager (e.g. conda or pip) to install
 * Mitsuba
 * jupyterlab
 * ipywidgets
+
 The recommended setup is to clone this repository and run tutorial.ipynb locally using VSCode's jupyter notebook integration.
 
 Instructions for installing pip https://pip.pypa.io/en/stable/installation/
