@@ -13,7 +13,7 @@ This first presentation was given for the advanced graphics seminar. This class 
 
 [https://docs.google.com/presentation/d/10__u8DagReH-SO_2vzRXxDx3FVcuOv0gvLUTrkZywLg](https://docs.google.com/presentation/d/10__u8DagReH-SO_2vzRXxDx3FVcuOv0gvLUTrkZywLg)
 
-This presentation was given for computational optics. It discusses NeRF as a solver for the rendering equation.
+This presentation was given for computational optics. It discusses NeRF as an approximate solver for the [rendering equation](https://en.wikipedia.org/wiki/Rendering_equation#:~:text=In%20computer%20graphics%2C%20the%20rendering,under%20a%20geometric%20optics%20approximation.).
 
 ## Dependencies:
 Use your preferred package manager (e.g. conda or pip) to install
